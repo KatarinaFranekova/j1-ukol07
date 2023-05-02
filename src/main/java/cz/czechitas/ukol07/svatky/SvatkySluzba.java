@@ -19,7 +19,7 @@ public class SvatkySluzba {
     private final SeznamSvatku seznamSvatku;
 
     public SvatkySluzba() throws IOException {
-        // TODO načíst seznam svátků ze souboru svatky.json
+
         seznamSvatku = objectMapper.readValue(cestaKDatum.toFile(), SeznamSvatku.class);
 
     }
@@ -35,17 +35,5 @@ public class SvatkySluzba {
                 .map(svatek -> svatek.getJmeno())
                 .toList();
 
-
-
-        // TODO
-        // získat seznam svátků
-        // převést na Stream
-        // pomocí metody filter() vybrat jen ty, které odpovídají zadanému dni (porovnat MonthDay pomocí metodyequals())
-        // pomocí metody map() získat z objektu jméno
-        // pomocí toList() převést na List
-
-
-
-        // Následující řádek po vlastní implementaci smažete.
     }
 }
